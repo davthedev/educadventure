@@ -24,17 +24,25 @@
       overlay bordered
     >
       <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
+
+
+
+        <q-item
+          clickable
+          :to="item.route" exact
+          v-for="(item, k) in menuItems" :key="k"
         >
-          Essential Links
-        </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+          <q-item-section
+            v-if="item.icon"
+            avatar
+          >
+            <q-icon :name="item.icon" />
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>{{item.title}}</q-item-label>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
@@ -56,13 +64,20 @@ export default {
 
   data () {
     return {
+
+
       leftDrawerOpen: false,
-      essentialLinks: [
+      
+      menuItems: [
         {
-          title: 'Docs',
-          caption: 'quasar.dev',
+          title: 'Map page',
+          icon: 'map',
+          route: '/',
+        },
+        {
+          title: 'Mission page',
           icon: 'school',
-          link: 'https://quasar.dev'
+          route: '/mission',
         },
       ]
     }
