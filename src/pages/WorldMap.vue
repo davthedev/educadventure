@@ -1,31 +1,50 @@
 <template>
   <q-page class="flex">
     <div style="flex:1">
-      <l-map :zoom="zoom" :center="center">
-        <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+      <l-map ref="map" :zoom="zoom" :center="center" :options="mapOptions" :crs="crs">
+        <l-tile-layer :url="url" :attribution="attribution"/>
+
+      <l-marker :lat-lng="[-50, 50]" />
       </l-map>
     </div>
+
   </q-page>
 </template>
 
 <script>
-import { LMap, LTileLayer } from 'vue2-leaflet'
+import { LMap, LTileLayer, LMarker } from 'vue2-leaflet'
 import L from 'leaflet'
+import { CRS } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
 export default {
   name: 'Map',
   components: {
     LMap,
-    LTileLayer
+    LTileLayer,
+    LMarker,
   },
   data () {
     return {
-      zoom: 13,
-      center: L.latLng(47.413220, -1.219482),
-      url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      crs: CRS.Simple,
+      map: null,
+      mapOptions: {
+        scrollWheelZoom: false,
+        maxBounds: [[0, 0], [-128, 256]],
+        noWrap: true,
+        zoomControl: false,
+      },
+      zoom: 4,
+      minZoom: 4,
+      maxZoom: 4,
+      center: [-50, 100],
+      url: 'statics/maps/fantasy/12/tile_{x}-{y}.png',
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.map = this.$refs.map.mapObject // work as expected
+    })
   }
 }
 </script>
