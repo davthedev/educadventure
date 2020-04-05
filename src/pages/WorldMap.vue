@@ -73,7 +73,7 @@ export default {
     accessPinData: function(datakey) {
       console.log("Open pin data " + datakey)
 
-      this.$router.push('/mission')
+      this.$router.push('/mission/' + datakey)
     }
   }
 }

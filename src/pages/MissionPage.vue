@@ -113,27 +113,74 @@ export default {
 
       fileModel: null,
 
+      missionId: 0,
+
       slides: [
         {
-          title: "Slide 1 title",
+          title: "Placeholder",
           text: "Slide 1 text",
           img: 'https://placeimg.com/500/300/nature',
         },
-        {
-          title: "Slide 2 title",
-          text: " Phasellus ut efficitur justo, sit amet suscipit dolor. Vivamus porttitor pretium nisl ut sagittis. Suspendisse et suscipit nisi. In sit amet quam venenatis turpis consequat pellentesque. Vivamus a massa faucibus, facilisis arcu ac, hendrerit eros. Proin ac eros ut dolor viverra elementum luctus egestas magna. Maecenas augue quam, ultrices et ornare sit amet, aliquam sed arcu. Mauris dignissim mauris nec finibus commodo. Integer malesuada imperdiet convallis. Praesent sollicitudin nulla id libero laoreet, non dictum ligula faucibus. Proin sed sodales eros. Sed quis fermentum ligula, quis rutrum justo. Maecenas feugiat porttitor tortor. Mauris volutpat lectus eget tortor euismod, sit amet bibendum ex accumsan. Etiam dignissim diam eget lacus ullamcorper iaculis. Donec et massa in sapien bibendum consequat. ",
-          img: null,
-        },
-        {
-          title: "Slide 3 title",
-          text: "Nulla pharetra congue ante, et laoreet est pretium et. Duis molestie id turpis ut commodo. Praesent vehicula metus quis libero rutrum, eget lacinia ante scelerisque. Fusce nibh odio, lacinia non ante sit amet, elementum feugiat eros. Nunc enim nisi, lobortis sit amet ligula eget, facilisis tempor lacus. Nunc faucibus fermentum mi sed fermentum. Cras fringilla nunc vel dui fermentum, ut malesuada urna malesuada. Maecenas malesuada urna vel turpis fringilla blandit. Ut pharetra molestie nibh. Integer pellentesque, massa nec blandit consectetur, orci quam pulvinar est, at ultricies mauris nisl non ipsum. Fusce malesuada tempor feugiat. ",
-          img: 'https://placeimg.com/500/300/nature',
-        },
-        {
-          title: "Slide 4 title",
-          text: "Nulla congue ante, et laoreet est pretium et. Duis molestie id turpis ut commodo. Praesent vehicula metus quis libero rutrum, eget lacinia ante scelerisque. Fusce nibh odio, lacinia non ante sit amet, elementum feugiat eros. Nunc enim nisi, lobortis sit amet ligula eget, facilisis tempor lacus. Nunc faucibus fermentum mi sed fermentum. Cras fringilla nunc vel dui fermentum, ut malesuada urna malesuada. Maecenas malesuada urna vel turpis fringilla blandit. Ut pharetra molestie nibh. Integer pellentesque, massa nec blandit consectetur, orci quam pulvinar est, at ultricies mauris nisl non ipsum. Fusce malesuada tempor feugiat. ",
-          img: null,
-        },
+      ],
+
+      allDecks: [
+
+
+        // MISSION 01 --------------------------------------------------------
+        [
+          
+
+          {
+            title: "Mission 1",
+            text: "Slide 1 text",
+            img: 'https://placeimg.com/500/300/nature',
+          },
+          {
+            title: "Slide 2 title",
+            text: " Phasellus ut efficitur justo, sit amet suscipit dolor. Vivamus porttitor pretium nisl ut sagittis. Suspendisse et suscipit nisi. In sit amet quam venenatis turpis consequat pellentesque. Vivamus a massa faucibus, facilisis arcu ac, hendrerit eros. Proin ac eros ut dolor viverra elementum luctus egestas magna. Maecenas augue quam, ultrices et ornare sit amet, aliquam sed arcu. Mauris dignissim mauris nec finibus commodo. Integer malesuada imperdiet convallis. Praesent sollicitudin nulla id libero laoreet, non dictum ligula faucibus. Proin sed sodales eros. Sed quis fermentum ligula, quis rutrum justo. Maecenas feugiat porttitor tortor. Mauris volutpat lectus eget tortor euismod, sit amet bibendum ex accumsan. Etiam dignissim diam eget lacus ullamcorper iaculis. Donec et massa in sapien bibendum consequat. ",
+            img: null,
+          },
+          {
+            title: "Slide 3 title",
+            text: "Nulla pharetra congue ante, et laoreet est pretium et. Duis molestie id turpis ut commodo. Praesent vehicula metus quis libero rutrum, eget lacinia ante scelerisque. Fusce nibh odio, lacinia non ante sit amet, elementum feugiat eros. Nunc enim nisi, lobortis sit amet ligula eget, facilisis tempor lacus. Nunc faucibus fermentum mi sed fermentum. Cras fringilla nunc vel dui fermentum, ut malesuada urna malesuada. Maecenas malesuada urna vel turpis fringilla blandit. Ut pharetra molestie nibh. Integer pellentesque, massa nec blandit consectetur, orci quam pulvinar est, at ultricies mauris nisl non ipsum. Fusce malesuada tempor feugiat. ",
+            img: 'https://placeimg.com/500/300/nature',
+          },
+          {
+            title: "Slide 4 title",
+            text: "Nulla congue ante, et laoreet est pretium et. Duis molestie id turpis ut commodo. Praesent vehicula metus quis libero rutrum, eget lacinia ante scelerisque. Fusce nibh odio, lacinia non ante sit amet, elementum feugiat eros. Nunc enim nisi, lobortis sit amet ligula eget, facilisis tempor lacus. Nunc faucibus fermentum mi sed fermentum. Cras fringilla nunc vel dui fermentum, ut malesuada urna malesuada. Maecenas malesuada urna vel turpis fringilla blandit. Ut pharetra molestie nibh. Integer pellentesque, massa nec blandit consectetur, orci quam pulvinar est, at ultricies mauris nisl non ipsum. Fusce malesuada tempor feugiat. ",
+            img: null,
+          },
+
+        ],
+
+        // MISSION 02 --------------------------------------------------------
+        [
+          
+
+          {
+            title: "Second mission",
+            text: "Slide 1 text",
+            img: 'https://placeimg.com/500/300/nature',
+          },
+          {
+            title: "Slide 2 title",
+            text: " Phasellus ut efficitur justo, sit amet suscipit dolor. Vivamus porttitor pretium nisl ut sagittis. Suspendisse et suscipit nisi. In sit amet quam venenatis turpis consequat pellentesque. Vivamus a massa faucibus, facilisis arcu ac, hendrerit eros. Proin ac eros ut dolor viverra elementum luctus egestas magna. Maecenas augue quam, ultrices et ornare sit amet, aliquam sed arcu. Mauris dignissim mauris nec finibus commodo. Integer malesuada imperdiet convallis. Praesent sollicitudin nulla id libero laoreet, non dictum ligula faucibus. Proin sed sodales eros. Sed quis fermentum ligula, quis rutrum justo. Maecenas feugiat porttitor tortor. Mauris volutpat lectus eget tortor euismod, sit amet bibendum ex accumsan. Etiam dignissim diam eget lacus ullamcorper iaculis. Donec et massa in sapien bibendum consequat. ",
+            img: null,
+          },
+          {
+            title: "Slide 3 title",
+            text: "Nulla pharetra congue ante, et laoreet est pretium et. Duis molestie id turpis ut commodo. Praesent vehicula metus quis libero rutrum, eget lacinia ante scelerisque. Fusce nibh odio, lacinia non ante sit amet, elementum feugiat eros. Nunc enim nisi, lobortis sit amet ligula eget, facilisis tempor lacus. Nunc faucibus fermentum mi sed fermentum. Cras fringilla nunc vel dui fermentum, ut malesuada urna malesuada. Maecenas malesuada urna vel turpis fringilla blandit. Ut pharetra molestie nibh. Integer pellentesque, massa nec blandit consectetur, orci quam pulvinar est, at ultricies mauris nisl non ipsum. Fusce malesuada tempor feugiat. ",
+            img: 'https://placeimg.com/500/300/nature',
+          },
+          {
+            title: "Slide 4 title",
+            text: "Nulla congue ante, et laoreet est pretium et. Duis molestie id turpis ut commodo. Praesent vehicula metus quis libero rutrum, eget lacinia ante scelerisque. Fusce nibh odio, lacinia non ante sit amet, elementum feugiat eros. Nunc enim nisi, lobortis sit amet ligula eget, facilisis tempor lacus. Nunc faucibus fermentum mi sed fermentum. Cras fringilla nunc vel dui fermentum, ut malesuada urna malesuada. Maecenas malesuada urna vel turpis fringilla blandit. Ut pharetra molestie nibh. Integer pellentesque, massa nec blandit consectetur, orci quam pulvinar est, at ultricies mauris nisl non ipsum. Fusce malesuada tempor feugiat. Now, mission 2 is over!",
+            img: null,
+          },
+
+        ]
+
+
       ]
     }
   },
@@ -168,7 +215,10 @@ export default {
     }
   },
   mounted() {
+    const missionId = this.$route.params.id
     this.currentSlideNum = 0
+    this.slides = this.allDecks[missionId]
+    this.missionId = missionId
     this.initSlideDeck()
     this.displaySlide()
   }
