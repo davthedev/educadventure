@@ -211,7 +211,7 @@ export default {
           {
             title: "Soap Making",
             text: "The first solution to avoid contamination of the apartment is to wash your hands. Difficult to do without soap! So I have to stock up on soap for the next few days.",
-            img: 'https://placeimg.com/500/300/nature',
+            img: 'statics/contents/1-1A_1-SoapBar.png',
           },
           {
             title: "Goal",
@@ -221,12 +221,12 @@ export default {
           {
             title: "Required skills",
             text: "Follow a protocol of experience\nPrecision and dexterity\nUnderstanding chemical reactions\nUnderstand what an atom and a molecule are",
-            img: 'https://placeimg.com/500/300/nature',
+            img: 'statics/contents/1-1A_3-Chemistry.jpg',
           },
           {
             title: "Material and reading prerequisites",
             text: "Chapter 14 of the manual Science of nature 9th - 11th: Microbes, useful or harmful?\n450g of oil (vegetal or olive)\n250g of butter (karite, coco, …)\n302 g of water\nIce or cold water\nEssential oil (optional)",
-            img: null,
+            img: 'statics/contents/1-1A_4-Oil.png',
           },
           {
             title: "Protocol",
@@ -250,7 +250,7 @@ export default {
           {
             title: "Making the invisible grow",
             text: "I need to make sure my apartment is clean, but I need to identify the places that are still full of microbes. I need to take samples and make them grow to observe them!",
-            img: 'https://placeimg.com/500/300/nature',
+            img: 'statics/contents/2-1B_1-AgarBacteria.jpeg',
           },
           {
             title: "Goal",
@@ -260,12 +260,12 @@ export default {
           {
             title: "Required skills",
             text: "Follow a protocol of experience\nPrecision, patience and dexterity\nUnderstanding what a microbe is and their reproduction\nKnow the differences between bacteria, fungi and virus",
-            img: 'https://placeimg.com/500/300/nature',
+            img: 'statics/contents/bacteria.jpeg',
           },
           {
             title: "Material and reading prerequisites",
             text: "Chapter 14 of the manual Science of nature 9th - 11th: Microbes, useful or harmful?\n450g of oil (vegetal or olive)\n250g of butter (karite, coco, …)\n302 g of water\nIce or cold water\nEssential oil (optional)",
-            img: null,
+            img: 'statics/contents/2-1B_4-Agar.jpeg',
           },
           {
             title: "Protocol",
@@ -300,7 +300,7 @@ export default {
           {
             title: "Fridge exploration",
             text: "During isolation, you have to know what are the rare commodities. So I'm going to check what is in my fridge and see where these foods come from!",
-            img: null,
+            img: 'statics/contents/5-2A_1-Fridge.jpg',
           },
           {
             title: "Goal",
@@ -315,12 +315,12 @@ export default {
           {
             title: "Material and reading prerequisites",
             text: "World map (attached)\nManual: chapter on the seasons\nFilled fridge",
-            img: null,
+            img: 'statics/contents/5-2A_4-FruitWorldMap.jpeg',
           },
           {
             title: "Protocol",
             text: "Draw three columns on your page / open a spreadsheet if you prefer to work on the computer.\nIn the first column, write down all the fruits and vegetables present in your home (fridge, cupboard).\nIn the second column, write the seasons during which these fruits normally grow.\nIn the third column, enter the country of origin of these fruits and vegetables.\nThen take the map of the world and draw a line on it between each country listed and Switzerland.",
-            img: null,
+            img: 'statics/contents/5-2A_5-DocumentSample.PNG',
           },
           {
             title: "To hand over",
@@ -333,7 +333,7 @@ export default {
           {
             title: "Mens sana",
             text: "Hygiene is one thing, but you also have to keep me in shape! I set myself some daily physical challenges!",
-            img: null,
+            img: 'statics/contents/6-7A_1-Cup.png',
           },
           {
             title: "Goal",
@@ -348,12 +348,12 @@ export default {
           {
             title: "Material and reqding prerequisites",
             text: "Non-slippery floor\nString\nWatch or stopwatch",
-            img: null,
+            img: 'statics/contents/6-7A_4-Chronometer.jpg',
           },
           {
             title: "Protocol",
             text: "With your string, draw a circle the size of your left foot on the ground.\nBalance yourself on the foot in the circle and hold your hands behind your back.\nTry to keep your balance for 30 seconds, without moving the string with your foot.\nWhen you have successfully completed this step with both feet, try the same thing but with your eyes closed.",
-            img: null,
+            img: 'statics/contents/6-7A_5-BalanceOneLeg.jpg',
           },
           {
             title: "To hand over",
@@ -382,7 +382,7 @@ export default {
           {
             title: "Bread Experiment",
             text: "Now I have my soap and I know how to identify the places full of microorganisms in my apartment. Now, I just need to know if my homemade soap is effective to get rid of the microorganisms!",
-            img: 'https://placeimg.com/500/300/nature',
+            img: 'statics/contents/9-1C_1-SoapWashing.jpg',
           },
           {
             title: "Goal",
@@ -392,12 +392,12 @@ export default {
           {
             title: "Required skills",
             text: "Follow a protocol of experience\nPrecision, patience and dexterity\nUnderstanding what a microbe is and their reproduction\nKnow the difference between bacteria, fungi and virus\nUnderstand what an atom and a molecule are",
-            img: null,
+            img: 'statics/contents/bacteria.jpeg',
           },
           {
             title: "Material and reading prerequisites",
             text: "Chapter 14 of the manual Science of nature 9th - 11th: Microbes, useful or harmful?\n2 bread slices\n2 airtight containers\nHomemade soap\nKitchen pliers\nOptional : Foldscope (1€ microscope)",
-            img: null,
+            img: 'statics/contents/9-1C_4-Bread.jpg',
           },
           {
             title: "Protocol",
@@ -415,7 +415,7 @@ export default {
           {
             title: "Keep the bond",
             text: "If I can no longer go to the library, I can still ask questions of the elderly who are still healthy. This is an opportunity to write a letter to my grandparents to ask them for news and tell about the routine that I have put in place!",
-            img: 'https://placeimg.com/500/300/nature',
+            img: 'statics/contents/10-3A_1-Grandparents.jpg',
           },
           {
             title: "Goal",
