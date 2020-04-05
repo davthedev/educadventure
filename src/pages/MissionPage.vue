@@ -174,7 +174,7 @@ export default {
           {
             title: "How to play",
             text: "My main task is to make sure there is no indoor contamination. I don't want my family to be affected by this virus! My contamination indicator tells me if my apartment is safe or not.",
-            img: 'statics/contents/screenshot_down_spread.png',
+            img: 'statics/contents/screenshot_down_spread10.png',
           },
           {
             title: "How to play",

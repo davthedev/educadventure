@@ -22,7 +22,7 @@
       <q-card class="miniboard">
         <q-card-section>
           <q-circular-progress
-            :value="20"
+            :value="10"
             size="90px"
             :thickness="0.2"
             color="red-13"
@@ -30,7 +30,7 @@
             class="q-ma-sm"
             show-value
           >
-            <div class="caption"><span class="smalltitle">SPREAD</span>20</div>
+            <div class="caption"><span class="smalltitle">SPREAD</span>10</div>
           </q-circular-progress>
           <q-circular-progress
             :value="50"
