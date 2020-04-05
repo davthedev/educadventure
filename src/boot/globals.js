@@ -14,6 +14,9 @@ export default async ({ Vue }) => {
       7: false,
       8: false,
       9: false,
+      10: false,
+      11: false,
+      12: false,
     },
 
     unlocked_missions: {
@@ -27,6 +30,9 @@ export default async ({ Vue }) => {
       7: false,
       8: false,
       9: false,
+      10: false,
+      11: false,
+      12: false,
     }  
   }
 }

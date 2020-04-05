@@ -5,12 +5,13 @@
         <l-tile-layer :url="url"/>
 
         <template v-for="(pin, k) in pins">
-          <l-marker v-if="unlocked_missions[pin.datakey]" :key="k" :lat-lng="pin.latlng" :icon="icon">
+          <l-marker v-if="unlocked_missions[pin.datakey]" :key="k" :lat-lng="pin.latlng" :icon="completed_missions[pin.datakey] ? icon_complete : icon">
             <l-popup >
               <p>{{pin.name}}</p>
               <!-- <p v-if="unlocked_missions[pin.datakey]">Unlocked</p><p v-else>Locked</p>
               <p v-if="completed_missions[pin.datakey]">Complete</p><p v-else>Unfinished</p> -->
-              <q-btn color="white" text-color="accent" rounded unelevated @click="accessPinData(pin.datakey)">BEGIN MISSION</q-btn>
+              <q-btn v-if="!completed_missions[pin.datakey]" color="white" text-color="accent" rounded unelevated @click="accessPinData(pin.datakey)">BEGIN MISSION</q-btn>
+              <q-btn v-else color="white" rounded outline disable>ALREADY COMPLETE</q-btn>
             </l-popup>
           </l-marker>
         </template>
@@ -130,7 +131,7 @@ export default {
         9: [1, 2],
         10: [5, 6],
         11: [7],
-        12: [10],
+        12: [10, 11],
       },
 
       unlocked_missions:{},
@@ -153,6 +154,13 @@ export default {
       url: 'statics/maps/fantasy/12/tile_{x}-{y}.png',
 
       icon: icon({
+        iconUrl: "statics/maps/pins/Pin2.png",
+        iconSize: [52, 84],
+        iconAnchor: [26, 84],
+        popupAnchor: [0, -84],
+      }),
+      
+      icon_complete: icon({
         iconUrl: "statics/maps/pins/Pin1.png",
         iconSize: [52, 84],
         iconAnchor: [26, 84],
