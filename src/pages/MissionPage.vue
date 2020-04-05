@@ -15,7 +15,7 @@
 
     <div v-if="showAssignment">
 
-      <q-card class="q-mt-xl vertical-middle submit-card">
+      <q-card class="q-mt-xl vertical-middle submit-card" v-if="!noSubmission">
         <q-card-section>
 
         <div class="text-h6">Upload your work</div>
@@ -33,6 +33,32 @@
             <q-icon name="attach_file" />
           </template>
           </q-file>
+          <q-btn
+            rounded unelevated
+            size="22px"
+            class="q-px-xl q-py-xs"
+            color="green-13"
+            label="FINISH"
+            icon="check" style="border-radius: 44px"
+            @click="finishMission"
+          />
+        </div>
+
+        </q-card-section> 
+      </q-card>
+
+      <q-card class="q-mt-xl vertical-middle submit-card" v-if="noSubmission">
+        <q-card-section>
+
+        <div class="text-h6">Finish this mission</div>
+
+        </q-card-section>
+
+        <q-card-section>
+
+        <p>You reached the last step of this mission. Now, move on to the next one!</p>
+
+        <div class="q-gutter-y-md column" style="max-width: 300px; margin: auto;">
           <q-btn
             rounded unelevated
             size="22px"
@@ -115,6 +141,8 @@ export default {
       maxPagination: 10,
 
       fileModel: null,
+
+      noSubmission: false,
 
       missionId: 0,
 
@@ -472,6 +500,8 @@ export default {
     this.currentSlideNum = 0
     this.slides = this.allDecks[missionId]
     this.missionId = missionId
+    if (missionId == 0)
+      this.noSubmission = true
     this.initSlideDeck()
     this.displaySlide()
   }

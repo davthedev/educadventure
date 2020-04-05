@@ -65,8 +65,8 @@
         <q-card-section>
           
           <q-btn-dropdown color="white" icon="menu" rounded flat>
-            <q-list>
-              <q-item clickable v-close-popup>
+            <q-list dark class="gamemenu">
+              <q-item clickable v-close-popup @click="resetGame">
                 <q-item-section>
                   <q-item-label>Reset game</q-item-label>
                 </q-item-section>
@@ -181,6 +181,25 @@ export default {
       this.$router.push('/mission/' + datakey)
     },
 
+    resetGame: function() {
+      let unlocked_missions = this.$gameglobals.unlocked_missions
+      let completed_missions = this.$gameglobals.completed_missions
+
+      for (var key in unlocked_missions) {
+        unlocked_missions[key] = false
+      }
+      for (var key in completed_missions) {
+        completed_missions[key] = false
+      }
+
+      this.unlocked_missions = unlocked_missions
+      this.completed_missions = completed_missions
+      this.$gameglobals.unlocked_missions = unlocked_missions
+      this.$gameglobals.completed_missions = completed_missions
+
+      this.updateUnlockStatus()
+    },
+
     // Update all unlock status of missions
     updateUnlockStatus: function() {
 
@@ -266,5 +285,11 @@ export default {
   .q-card__section--vert
     padding-top: 5px
     padding-bottom: 5px
+
+.gamemenu
+  background-color: $accent
+  width: 200px
+  font-weight: 400
+  font-size: 16px
 
 </style>
