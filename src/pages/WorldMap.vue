@@ -10,8 +10,8 @@
               <p>{{pin.name}}</p>
               <!-- <p v-if="unlocked_missions[pin.datakey]">Unlocked</p><p v-else>Locked</p>
               <p v-if="completed_missions[pin.datakey]">Complete</p><p v-else>Unfinished</p> -->
-              <q-btn v-if="!completed_missions[pin.datakey]" color="white" text-color="accent" rounded unelevated @click="accessPinData(pin.datakey)">BEGIN MISSION</q-btn>
-              <q-btn v-else color="white" rounded outline disable>ALREADY COMPLETE</q-btn>
+              <q-btn style="width: 160px" v-if="!completed_missions[pin.datakey]" color="white" text-color="accent" rounded unelevated @click="accessPinData(pin.datakey)" icon="double_arrow">START</q-btn>
+              <q-btn style="width: 160px" v-else color="white" rounded outline disable icon="o_assignment_turned_in">COMPLETE</q-btn>
             </l-popup>
           </l-marker>
         </template>
@@ -154,14 +154,14 @@ export default {
       url: 'statics/maps/fantasy/12/tile_{x}-{y}.png',
 
       icon: icon({
-        iconUrl: "statics/maps/pins/Pin2.png",
+        iconUrl: "statics/maps/pins/Pin1.png",
         iconSize: [52, 84],
         iconAnchor: [26, 84],
         popupAnchor: [0, -84],
       }),
       
       icon_complete: icon({
-        iconUrl: "statics/maps/pins/Pin1.png",
+        iconUrl: "statics/maps/pins/Pin3.png",
         iconSize: [52, 84],
         iconAnchor: [26, 84],
         popupAnchor: [0, -84],
