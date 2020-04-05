@@ -36,8 +36,8 @@ export default {
 
 
       pins: [
-        {name:"Challenge 1", datakey:0, latlng:[-50, 50]},
-        {name:"Challenge 2", datakey:1, latlng:[-30, 50]},
+        {name:"The toilet is dirty", datakey:0, latlng:[-47, 95]},
+        {name:"How to wash your dishes", datakey:1, latlng:[-32, 130]},
       ],
 
 
@@ -78,5 +78,17 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="sass">
+.leaflet-container
+  background-color: $blue-grey-9
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);
+
+.leaflet-popup-content
+  font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 14px
+
+.leaflet-popup-content .q-btn__content
+  font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif
+  line-height: 1.5
+  font-size: 14px
 </style>
