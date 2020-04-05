@@ -100,7 +100,7 @@ export default {
   data () {
     return {
 
-      dbgUnlockAll: true,
+      dbgUnlockAll: false,
 
       pins: [
         {name:"Welcome! Here is the tutorial",    datakey:0, latlng:[-60, 125]},
