@@ -10,12 +10,54 @@
               <p>{{pin.name}}</p>
               <!-- <p v-if="unlocked_missions[pin.datakey]">Unlocked</p><p v-else>Locked</p>
               <p v-if="completed_missions[pin.datakey]">Complete</p><p v-else>Unfinished</p> -->
-              <q-btn color="primary" @click="accessPinData(pin.datakey)">Go there</q-btn>
+              <q-btn color="white" text-color="accent" rounded unelevated @click="accessPinData(pin.datakey)">BEGIN MISSION</q-btn>
             </l-popup>
           </l-marker>
         </template>
       </l-map>
     </div>
+
+    <q-page-sticky position="bottom" :offset="[0, 24]" style="z-index: 2000">
+      
+      <q-card class="miniboard">
+        <q-card-section>
+          <q-circular-progress
+            :value="20"
+            size="90px"
+            :thickness="0.2"
+            color="orange"
+            track-color="grey-3"
+            class="q-ma-sm"
+            show-value
+          >
+            20
+          </q-circular-progress>
+          <q-circular-progress
+            :value="50"
+            size="90px"
+            :thickness="0.2"
+            color="purple"
+            track-color="grey-3"
+            class="q-ma-sm"
+            show-value
+          >
+            LV 2
+          </q-circular-progress>
+          <q-circular-progress
+            :value="50"
+            size="90px"
+            :thickness="0.2"
+            color="green"
+            track-color="grey-3"
+            class="q-ma-sm"
+            show-value
+          >
+          </q-circular-progress>
+
+        </q-card-section>
+      </q-card>
+
+    </q-page-sticky>
   </q-page>
 </template>
 
@@ -121,14 +163,36 @@ export default {
 <style lang="sass">
 .leaflet-container
   background-color: $blue-grey-9
-  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px)
 
 .leaflet-popup-content
   font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif
-  font-size: 14px
+  font-size: 16px
 
 .leaflet-popup-content .q-btn__content
   font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif
   line-height: 1.5
   font-size: 14px
+
+.leaflet-popup-content-wrapper
+  background-color: $accent
+  color: white
+  border-radius: 24px
+
+
+.leaflet-popup-content-wrapper .leaflet-popup-content 
+  margin: 26px 26px
+  text-align: center
+
+.leaflet-popup-tip-container
+
+.leaflet-popup-tip
+  background-color: $accent
+
+.leaflet-container a.leaflet-popup-close-button
+  font-size: 20px
+  color: white
+
+.miniboard
+  border-radius: 150px
 </style>

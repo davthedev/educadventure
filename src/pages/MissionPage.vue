@@ -55,10 +55,10 @@
     
       <div>
         <template v-for="(n, k) in maxPagination">
-          <q-btn v-if="n == currentSlideBaseOne && showSlide" round unelevated color="white" textColor="black" :key="k">{{n}}</q-btn>
+          <q-btn v-if="n == currentSlideBaseOne && showSlide" round unelevated color="accent" :key="k">{{n}}</q-btn>
           <q-btn v-else round flat color="white"  :key="k" @click="activateSlide(n - 1)">{{n}}</q-btn>
         </template>
-        <q-btn v-if="showAssignment" round unelevated color="positive"  :key="k" icon="assignment" @click="activateShowAssignment"></q-btn>
+        <q-btn v-if="showAssignment" round unelevated color="accent"  :key="k" icon="assignment" @click="activateShowAssignment"></q-btn>
         <q-btn v-else round flat color="white" :key="k" icon="assignment" @click="activateShowAssignment"></q-btn>
       </div>
 
@@ -70,7 +70,7 @@
 
 .course-page-wrapper
   background-color: $blue-grey-9
-  //background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.02) 35px, rgba(255,255,255,.02) 70px)
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.02) 35px, rgba(255,255,255,.02) 70px)
 
     
     
@@ -78,10 +78,13 @@
 
 .doc-page
   padding: 16px 46px
-  font-weight: 300
+  font-weight: 400
   max-width: 900px
   margin-left: auto
   margin-right: auto
+
+.my-course-page
+  font-size: 16px
 
 .my-course-page h2
   text-align: center
