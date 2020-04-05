@@ -81,7 +81,7 @@ export default {
 <style lang="sass">
 .leaflet-container
   background-color: $blue-grey-9
-  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)
 
 .leaflet-popup-content
   font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif
