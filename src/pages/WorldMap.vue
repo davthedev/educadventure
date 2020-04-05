@@ -17,47 +17,67 @@
       </l-map>
     </div>
 
-    <q-page-sticky position="bottom" :offset="[0, 24]" style="z-index: 2000">
-      
+    <q-page-sticky position="bottom" :offset="[0, 0]" style="z-index: 2000">
       <q-card class="miniboard">
         <q-card-section>
           <q-circular-progress
             :value="20"
             size="90px"
             :thickness="0.2"
-            color="orange"
-            track-color="grey-3"
+            color="red-13"
+            track-color="grey-8"
             class="q-ma-sm"
             show-value
           >
-            20
+            <div class="caption"><span class="smalltitle">SPREAD</span>20</div>
           </q-circular-progress>
           <q-circular-progress
             :value="50"
             size="90px"
             :thickness="0.2"
-            color="purple"
-            track-color="grey-3"
+            color="cyan-5"
+            track-color="grey-8"
             class="q-ma-sm"
             show-value
           >
-            LV 2
+            <div class="caption"><span class="smalltitle">LEVEL</span>3</div>
           </q-circular-progress>
           <q-circular-progress
-            :value="50"
+            :value="30"
             size="90px"
             :thickness="0.2"
-            color="green"
-            track-color="grey-3"
+            color="yellow-12"
+            track-color="grey-8"
             class="q-ma-sm"
             show-value
           >
+            <div class="caption"><span class="smalltitle">GOODWILL</span>30</div>
           </q-circular-progress>
 
         </q-card-section>
       </q-card>
 
     </q-page-sticky>
+
+    <q-page-sticky position="top" :offset="[0, 0]" style="z-index: 2000">
+      <q-card class="miniboardup">
+        <q-card-section>
+          
+          <q-btn-dropdown color="white" icon="menu" rounded flat>
+            <q-list>
+              <q-item clickable v-close-popup>
+                <q-item-section>
+                  <q-item-label>Reset game</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-btn-dropdown>
+        </q-card-section>
+      </q-card>
+
+    </q-page-sticky>
+
+
   </q-page>
 </template>
 
@@ -79,15 +99,38 @@ export default {
   data () {
     return {
 
+      dbgUnlockAll: true,
 
       pins: [
-        {name:"The toilet is dirty", datakey:0, latlng:[-47, 95]},
-        {name:"How to wash your dishes", datakey:1, latlng:[-32, 130]},
+        {name:"Welcome! Here is the tutorial",    datakey:0, latlng:[-60, 125]},
+        {name:"Soap making",                      datakey:1, latlng:[-40, 138]},
+        {name:"Growing bacteria",                 datakey:2, latlng:[-52, 100]},
+        {name:"Hy-giene",                         datakey:3, latlng:[-31, 115]},
+        {name:"Super power",                      datakey:4, latlng:[-70, 138]},
+        {name:"Fridge exploration",               datakey:5, latlng:[-40, 153]},
+        {name:"Mens Sana",                        datakey:6, latlng:[-73, 148]},
+        {name:"Soap coalition",                   datakey:7, latlng:[-79, 128]},
+        {name:"Shapin' Cleanliness",              datakey:8, latlng:[-79, 136]},
+        {name:"Bread experiment",                 datakey:9, latlng:[-50, 133]},
+        {name:"Keep the bond",                    datakey:10, latlng:[-72, 100]},
+        {name:"Law of soap",                      datakey:11, latlng:[-89, 143]},
+        {name:"Is it war?",                       datakey:12, latlng:[-90, 110]},
       ],
 
       unlock_conditions: {
         0: [],
         1: [0],
+        2: [0],
+        3: [0],
+        4: [0],
+        5: [0],
+        6: [0],
+        7: [0],
+        8: [1],
+        9: [1, 2],
+        10: [5, 6],
+        11: [7],
+        12: [10],
       },
 
       unlocked_missions:{},
@@ -146,7 +189,7 @@ export default {
             result = false
           }
         })
-        if (result == true) {
+        if (result == true || this.dbgUnlockAll) {
           console.log("unlocking mission " + key)
           unlocked_missions[key] = true
         }
@@ -192,7 +235,28 @@ export default {
 .leaflet-container a.leaflet-popup-close-button
   font-size: 20px
   color: white
+  padding: 10px 30px
 
 .miniboard
-  border-radius: 150px
+  border-radius: 60px 60px 0 0
+  background-color: $grey-9
+  color: white
+
+  .caption
+    font-size: 34px
+    text-align: center
+
+  .smalltitle
+    font-size: 10px
+    display: block
+    font-weight: 500
+
+.miniboardup
+  border-radius: 0 0 30px 30px
+  background-color: $grey-9
+  color: white
+  .q-card__section--vert
+    padding-top: 5px
+    padding-bottom: 5px
+
 </style>
