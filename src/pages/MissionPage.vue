@@ -209,9 +209,14 @@ export default {
     },
 
     finishMission: function() {
-      // TODO Mark as finished
-
+      this.markMissionComplete()
       this.$router.push('/')
+    },
+
+    markMissionComplete: function() {
+      let completed_missions = this.$gameglobals.completed_missions
+      completed_missions[this.missionId] = true
+      this.$gameglobals.completed_missions = completed_missions
     }
   },
   mounted() {
